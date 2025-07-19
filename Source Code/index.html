@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Clone - Sign In or Sign Up</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="hero-section">
+            <div class="hero-image">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6aa07459-663c-4f52-adc6-f4b494bf3fa3.png" alt="Facebook logo in dark blue with rounded square letter shapes on white background" />
+            </div>
+            <h2 class="hero-text">
+                Facebook helps you connect and share with the people in your life.
+            </h2>
+        </div>
+        
+        <div class="form-wrapper">
+            <div class="form-container">
+                <div class="login-form">
+                    <form id="loginForm">
+                        <input type="text" placeholder="Email address or phone number" required>
+                        <input type="password" placeholder="Password" required>
+                        <button type="submit" class="login-button">Log in</button>
+                        <div class="forgot-pass">
+                            <a href="#">Forgotten password?</a>
+                        </div>
+                        <div class="divider"></div>
+                        <button type="button" class="signup-button" id="showSignup">Create new account</button>
+                    </form>
+                </div>
+
+                <div class="signup-form">
+                    <form id="signupForm">
+                        <h2 class="signup-title">Sign Up</h2>
+                        <p class="signup-subtitle">It's quick and easy.</p>
+                        <div class="name-fields">
+                            <input type="text" placeholder="First name" required>
+                            <input type="text" placeholder="Surname" required>
+                        </div>
+                        <input type="text" placeholder="Mobile number or email address" required>
+                        <input type="password" placeholder="New password" required>
+                        <div class="dob-gender">
+                            <div class="dob-title">Date of birth</div>
+                            <div class="dob-fields">
+                                <select required>
+                                    <option value="" disabled selected>Day</option>
+                                    <script>
+                                        for (let i = 1; i <= 31; i++) {
+                                            document.write(`<option value="${i}">${i}</option>`);
+                                        }
+                                    </script>
+                                </select>
+                                <select required>
+                                    <option value="" disabled selected>Month</option>
+                                    <option value="1">Jan</option>
+                                    <option value="2">Feb</option>
+                                    <option value="3">Mar</option>
+                                    <option value="4">Apr</option>
+                                    <option value="5">May</option>
+                                    <option value="6">Jun</option>
+                                    <option value="7">Jul</option>
+                                    <option value="8">Aug</option>
+                                    <option value="9">Sep</option>
+                                    <option value="10">Oct</option>
+                                    <option value="11">Nov</option>
+                                    <option value="12">Dec</option>
+                                </select>
+                                <select required>
+                                    <option value="" disabled selected>Year</option>
+                                    <script>
+                                        const currentYear = new Date().getFullYear();
+                                        for (let i = currentYear; i >= currentYear - 100; i--) {
+                                            document.write(`<option value="${i}">${i}</option>`);
+                                        }
+                                    </script>
+                                </select>
+                            </div>
+                            <div class="gender-title">Gender</div>
+                            <div class="gender-fields">
+                                <div class="gender-field">
+                                    <input type="radio" name="gender" id="female" value="female" required>
+                                    <label for="female">Female</label>
+                                </div>
+                                <div class="gender-field">
+                                    <input type="radio" name="gender" id="male" value="male">
+                                    <label for="male">Male</label>
+                                </div>
+                                <div class="gender-field">
+                                    <input type="radio" name="gender" id="custom" value="custom">
+                                    <label for="custom">Custom</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="signup-button">Sign Up</button>
+                        <div class="forgot-pass">
+                            <a href="#" id="showLogin">Already have an account?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="create-page">
+                <a href="#"><b>Create a Page</b> for a celebrity, brand or business.</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
